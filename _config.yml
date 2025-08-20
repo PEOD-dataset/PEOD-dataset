@@ -1,5 +1,5 @@
-title: "PEOD Dataset"
-description: "Pixel-aligned Event-RGB dataset for challenging object detection. First large-scale multimodal benchmark combining high-resolution event streams and RGB imagery."
+title: "PEOD: Pixel-aligned Event-RGB Object Detection Dataset"
+description: "First large-scale dataset providing synchronized high-resolution event streams and RGB images for object detection under challenging conditions. Features 120+ driving sequences, 340k annotations, and comprehensive benchmarks across multiple modalities."
 theme: jekyll-theme-cayman
 
 # Site settings
@@ -11,6 +11,7 @@ email: "contact@peod-dataset.org"
 # SEO and social media settings
 lang: en
 locale: en_US
+image: /datasetshow.png
 twitter:
   username: peod_dataset
   card: summary_large_image
@@ -21,6 +22,10 @@ social:
   name: "PEOD Dataset"
   links:
     - https://github.com/PEOD-dataset/PEOD-dataset
+
+# SEO tags
+tagline: "First large-scale pixel-aligned event-RGB dataset for challenging object detection"
+keywords: "event camera, object detection, computer vision, autonomous driving, dataset, RGB, multimodal, AAAI"
 
 # Google Analytics (when available)
 # google_analytics: UA-XXXXXXXX-X
@@ -44,7 +49,6 @@ plugins:
 
 # Exclude files from build
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -52,6 +56,7 @@ exclude:
   - .bundle
   - .sass-cache
   - .jekyll-cache
+  - "*.pdf"
 
 # Include files
 include:
