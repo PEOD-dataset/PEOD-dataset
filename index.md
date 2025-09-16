@@ -168,60 +168,40 @@ if len(boxes) > 0:
 ## 📥 Download
 
 <div style="background: #e3f2fd; padding: 2rem; border-radius: 8px; border-left: 4px solid #2196f3; margin: 2rem 0;">
-<h3>🚧 Dataset Release</h3>
-<p>The PEOD dataset will be publicly released soon. Data will be provided in RAW and DAT formats with corresponding annotations in NumPy format.</p>
-<p><strong>Stay tuned for download links and access instructions!</strong></p>
+<h3>🚧 数据集发布</h3>
+<p>PEOD 数据集尚未公开发布。请持续关注以获取下载链接！</p>
 </div>
 
-**Planned Release Formats:**
-- **RAW format**: Unprocessed event and RGB data
-- **DAT format**: Preprocessed event representations  
-- **Annotations**: NumPy arrays with bounding box coordinates
-- **Metadata**: Dataset statistics and split information
+## 📁 Dataset Structure
+```text
+PEOD/
+|-train/
+|   |-seq_001/            # sequence name
+|       |- image/         # RGB Frames
+|           |-0001.png
+|             0002.png
+|             0003.png
+|             .....
+|       |- event/         #Event stream data
+|           |-seq_name.raw
+|           |-seq_name.dat
+|       |- annotation.json        #Bounding box annotations
+|       |- timestamp.txt          #Synchronous trigger timestamps
+|   |-seq_002/
+|   |- ...
+|   
+|- test/
+|   |-Normal                  # Subset comprising sequences captured under nominal illumination
+|   |-Illumination_Challenge  #  Subset comprising sequences captured under challenging illumination condition
 
-## 📚 Citation
+bbox.npy
 
-If you use PEOD in your research, please cite our paper:
-
-```bibtex
-@inproceedings{peod2025,
-  title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author={[Authors]},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025},
-  note={To appear}
-}
+t:                (uint64)  timestamp of the detection in microseconds.
+x:                (float64) x-coordinate of the top-left corner of the bounding box
+y:                (float64) y-coordinate of the bounding box
+h:                (float64) height of the bounding box
+w:                (float64) width of the bounding box
+class_id:         (uint8)   Class of the object in the bounding box.
 ```
 
-## 🤝 Contributing
-
-We welcome contributions to improve the dataset and benchmark! Please:
-
-1. **Report Issues**: Use GitHub Issues for bug reports or feature requests
-2. **Contribute Code**: Submit pull requests for improvements
-3. **Share Results**: Help us expand the benchmark with your model evaluations
-
-## 📞 Contact
-
-For questions, suggestions, or collaboration opportunities:
-
-- **GitHub**: [PEOD-dataset/PEOD-dataset](https://github.com/PEOD-dataset/PEOD-dataset)
-- **Issues**: [Report technical issues](https://github.com/PEOD-dataset/PEOD-dataset/issues)
-- **Email**: Contact information will be provided upon publication
-
 ---
-
-<div align="center" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
-
-**🌟 Star this repository if you find PEOD useful for your research! 🌟**
-
-<p style="margin-top: 1rem;">
-<a href="https://github.com/PEOD-dataset/PEOD-dataset/stargazers">
-<img src="https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=social" alt="GitHub stars">
-</a>
-<a href="https://github.com/PEOD-dataset/PEOD-dataset/network/members">
-<img src="https://img.shields.io/github/forks/PEOD-dataset/PEOD-dataset?style=social" alt="GitHub forks">
-</a>
-</p>
-
-</div>
