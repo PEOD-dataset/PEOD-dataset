@@ -457,7 +457,6 @@
         <li><a href="#visualizations">Visualizations</a></li>
         <li><a href="#benchmark">Benchmark</a></li>
         <li><a href="#download">Download</a></li>
-        <li><a href="#citation">Citation</a></li>
       </ul>
     </div>
   </nav>
@@ -862,20 +861,58 @@ cv2.waitKey(0)</code></pre>
     </div>
   </section>
 
+  <!-- Dataset Structure Section -->
+  <section id="dataset-structure" class="section">
+    <div class="container">
+      <div class="glass-card">
+        <h2 class="section-title">Dataset Structure</h2>
+        <div class="code-block"><pre><code>PEOD/
+|-train/
+|	|-seq_001/			# sequence name
+|		|- image/			# RGB Frames
+|			|-0001.png
+|			  0002.png
+|                         0003.png
+|                        .....
+|		|- event/			#Event stream data
+|			|-seq_name.raw
+|			|-seq_name.dat
+|		|- annotation.json		#Bounding box annotations
+|		|- timestamp.txt		#Synchronous trigger timestamps
+|	|-seq_002/
+|	|- ...
+|	
+|- test/
+|	|-Normal			# Subset comprising sequences captured under nominal illumination
+|	|-Illumination_Challenge	#  Subset comprising sequences captured under challenging illumination condition
+
+
+
+bbox.npy
+t:                (uint64)  timestamp of the detection in microseconds.
+x:                (float64) x-coordinate of the top-left corner of the bounding box
+y:                (float64) y-coordinate of the top-left corner of the bounding box
+h:                (float64) height of the bounding box
+w:                (float64) width of the bounding box
+class_id:         (uint8)   Class of the object in the bounding box.</code></pre></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Download Section -->
   <section id="download" class="section">
     <div class="container">
       <div class="glass-card">
-        <h2 class="section-title">Dataset Download</h2>
+        <h2 class="section-title">待发布</h2>
         <p class="section-subtitle">
-          The PEOD dataset will be publicly released upon paper acceptance
+          The PEOD dataset will be publicly released soon
         </p>
         
         <div style="text-align: center; padding: 2rem 0;">
           <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 16px; display: inline-block; margin-bottom: 2rem;">
             <i class="fas fa-hourglass-half" style="font-size: 3rem; margin-bottom: 1rem;"></i>
             <h3>Coming Soon</h3>
-            <p>Dataset will be released publicly upon paper acceptance</p>
+            <p>Dataset will be released publicly soon</p>
           </div>
         </div>
 
@@ -906,35 +943,7 @@ cv2.waitKey(0)</code></pre>
     </div>
   </section>
 
-  <!-- Citation Section -->
-  <section id="citation" class="section">
-    <div class="container">
-      <div class="glass-card">
-        <h2 class="section-title">Citation</h2>
-        <p class="section-subtitle">
-          If you use PEOD in your research, please cite our paper (currently under review)
-        </p>
-
-        <div class="highlight-box">
-          <p><strong>Status:</strong> Paper submitted to AAAI 2026 (currently under peer review)</p>
-        </div>
-
-        <div class="code-block">
-          <pre><code>@article{PEOD2026,
-  title     = {PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author    = {[Authors to be revealed upon acceptance]},
-  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
-  year      = {2026},
-  note      = {Under review}
-}</code></pre>
-        </div>
-
-        <p style="color: #666; margin-top: 2rem; text-align: center;">
-          <em>Full citation details will be updated upon paper acceptance</em>
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Footer -->
   <footer class="footer">
@@ -951,7 +960,7 @@ cv2.waitKey(0)</code></pre>
           </a>
         </p>
         <p style="margin-top: 1rem; opacity: 0.7;">
-          © 2025 PEOD Dataset. Released under MIT License.
+          © 2025 PEOD Dataset.
         </p>
       </div>
     </div>

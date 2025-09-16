@@ -8,7 +8,6 @@ description: "First large-scale pixel-aligned event-RGB dataset for challenging 
 
 # PEOD: Pixel‑aligned Event‑RGB Object Detection Dataset
 
-[![AAAI 2025](https://img.shields.io/badge/AAAI-2025-red?style=flat-square)](https://aaai.org/conference/aaai/aaai-25/)
 [![Dataset](https://img.shields.io/badge/Dataset-Coming%20Soon-green?style=flat-square)](#download)
 [![GitHub](https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=flat-square&logo=github)](https://github.com/PEOD-dataset/PEOD-dataset)
 
@@ -79,6 +78,40 @@ Object detection for challenging scenarios increasingly relies on event cameras 
 
 </div>
 
+## 📁 Dataset Structure
+
+```
+PEOD/
+|-train/
+|\t|-seq_001/\t\t\t\t# sequence name
+|\t\t|- image/\t\t\t\t# RGB Frames
+|\t\t\t|-0001.png
+|\t\t\t  0002.png
+|                         0003.png
+|                        .....
+|\t\t|- event/\t\t\t\t#Event stream data
+|\t\t\t|-seq_name.raw
+|\t\t\t|-seq_name.dat
+|\t\t|- annotation.json\t\t#Bounding box annotations
+|\t\t|- timestamp.txt\t\t#Synchronous trigger timestamps
+|\t|-seq_002/
+|\t|- ...
+|\t
+|- test/
+|\t|-Normal\t\t\t\t# Subset comprising sequences captured under nominal illumination
+|\t|-Illumination_Challenge\t#  Subset comprising sequences captured under challenging illumination condition
+
+
+
+bbox.npy
+t:                (uint64)  timestamp of the detection in microseconds.
+x:                (float64) x-coordinate of the top-left corner of the bounding box
+y:                (float64) y-coordinate of the top-left corner of the bounding box
+h:                (float64) height of the bounding box
+w:                (float64) width of the bounding box
+class_id:         (uint8)   Class of the object in the bounding box.
+```
+
 ## 🏆 Benchmark Results
 
 We evaluated representative detectors on three modalities: event‑only, RGB‑only and Event+RGB fusion. Fusion models achieve the best accuracy while event‑only methods excel under extreme illumination.
@@ -133,81 +166,10 @@ The dataset includes six carefully selected object classes relevant to autonomou
 
 </div>
 
-## 💻 Usage Example
+## 📥 待发布
 
-Get started with PEOD using this simple Python example:
+数据集即将发布，敬请期待。
 
-```python
-import numpy as np
-from pathlib import Path
-import cv2
-
-# Define paths to data components
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load annotations (N × 6: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Visualize first annotation
-if len(boxes) > 0:
-    frame_idx, cls_id, x, y, w, h = boxes[0]
-    cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-    cv2.putText(img, f'Class: {cls_id}', (int(x), int(y)-10), 
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-    
-    cv2.imshow('PEOD Sample', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-```
-
-## 📥 Download
-
-<div style="background: #e3f2fd; padding: 2rem; border-radius: 8px; border-left: 4px solid #2196f3; margin: 2rem 0;">
-<h3>🚧 Dataset Release</h3>
-<p>The PEOD dataset will be publicly released soon. Data will be provided in RAW and DAT formats with corresponding annotations in NumPy format.</p>
-<p><strong>Stay tuned for download links and access instructions!</strong></p>
-</div>
-
-**Planned Release Formats:**
-- **RAW format**: Unprocessed event and RGB data
-- **DAT format**: Preprocessed event representations  
-- **Annotations**: NumPy arrays with bounding box coordinates
-- **Metadata**: Dataset statistics and split information
-
-## 📚 Citation
-
-If you use PEOD in your research, please cite our paper:
-
-```bibtex
-@inproceedings{peod2025,
-  title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author={[Authors]},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025},
-  note={To appear}
-}
-```
-
-## 🤝 Contributing
-
-We welcome contributions to improve the dataset and benchmark! Please:
-
-1. **Report Issues**: Use GitHub Issues for bug reports or feature requests
-2. **Contribute Code**: Submit pull requests for improvements
-3. **Share Results**: Help us expand the benchmark with your model evaluations
-
-## 📞 Contact
-
-For questions, suggestions, or collaboration opportunities:
-
-- **GitHub**: [PEOD-dataset/PEOD-dataset](https://github.com/PEOD-dataset/PEOD-dataset)
-- **Issues**: [Report technical issues](https://github.com/PEOD-dataset/PEOD-dataset/issues)
-- **Email**: Contact information will be provided upon publication
 
 ---
 
