@@ -3,10 +3,9 @@
 <div align="center">
 
 [![Project Page](https://img.shields.io/badge/🌐_Project_Page-Visit_Our_Website-blue?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
-[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2025-red?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
-[![Dataset](https://img.shields.io/badge/📊_Dataset-Coming_Soon-green?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
+[![Dataset](https://img.shields.io/badge/📊_Dataset-待发布-green?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
 
-[**🚀 View Interactive Demo**](https://peod-dataset.github.io/PEOD-dataset/) | [**📖 Documentation**](https://peod-dataset.github.io/PEOD-dataset/) | [**💾 Download**](https://peod-dataset.github.io/PEOD-dataset/)
+[**🚀 View Interactive Demo**](https://peod-dataset.github.io/PEOD-dataset/)
 
 </div>
 
@@ -59,61 +58,40 @@ We evaluated state-of-the-art object detection models across three modalities:
 
 > 📝 **Note**: Results show COCO mAP₅₀:₉₅ scores. Fusion approaches demonstrate superior performance by combining the strengths of both modalities.
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install numpy opencv-python matplotlib
-```
-
-### Quick Start Example
-
-```python
-import numpy as np
-from pathlib import Path
-import cv2
-
-# Define paths to data components
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load annotations (N × 6: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Visualize first annotation
-if len(boxes) > 0:
-    frame_idx, cls_id, x, y, w, h = boxes[0]
-    cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-    cv2.putText(img, f'Class: {cls_id}', (int(x), int(y)-10), 
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-    
-    cv2.imshow('PEOD Sample', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-```
+ 
 
 ## 📁 Dataset Structure
 
 ```
 PEOD/
-├── train/
-│   ├── sequence_001/
-│   │   ├── rgb/              # RGB frames (PNG format)
-│   │   ├── events.dat        # Event stream data
-│   │   └── boxes.npy         # Bounding box annotations
-│   ├── sequence_002/
-│   └── ...
-├── test/
-│   └── [similar structure]
-└── metadata/
-    ├── class_names.txt       # Object class definitions
-    ├── statistics.json       # Dataset statistics
-    └── splits.json          # Train/test split information
+|-train/
+|	|-seq_001/			# sequence name
+|		|- image/			# RGB Frames
+|			|-0001.png
+|			  0002.png
+|		                         0003.png
+|		                        .....
+|		|- event/			#Event stream data
+|			|-seq_name.raw
+|			|-seq_name.dat
+|		|- annotation.json		#Bounding box annotations
+|		|- timestamp.txt		#Synchronous trigger timestamps
+|	|-seq_002/
+|	|- ...
+|	
+|- test/
+|	|-Normal			# Subset comprising sequences captured under nominal illumination
+|	|-Illumination_Challenge	#  Subset comprising sequences captured under challenging illumination condition
+
+
+
+bbox.npy
+t:			(uint64)	 timestamp of the detection in microseconds.
+x:			(float64) x-coordinate of the top-left corner of the bounding box
+y:			(float64) y-coordinate of the top-left corner of the bounding box
+h:			(float64) height of the bounding box
+w:			(float64) width of the bounding box
+class_id:	 (uint8)   Class of the object in the bounding box.
 ```
 
 ## 🎯 Object Classes
@@ -145,44 +123,11 @@ Our coaxial dual-camera system ensures precise spatial correspondence between ev
 - **Motion blur immunity**: Sharp perception during rapid movement
 - **Low latency**: Real-time perception capabilities
 
-## 📥 Download & Access
+## 📥 待发布
 
-> 🚧 **Dataset Release**: The PEOD dataset will be publicly available soon. Please check our [project page](https://peod-dataset.github.io/PEOD-dataset/) for the latest updates.
+数据集当前处于准备发布阶段，具体下载与访问方式将于稍后公布。
 
-**Planned Formats:**
-- **RAW format**: Unprocessed event and RGB data
-- **DAT format**: Preprocessed event representations
-- **Annotations**: NumPy arrays with bounding box coordinates
-
-## 📚 Citation
-
-If you use PEOD in your research, please cite our paper:
-
-```bibtex
-@inproceedings{peod2025,
-  title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author={[Authors]},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025},
-  note={To appear}
-}
-```
-
-## 🤝 Contributing
-
-We welcome contributions to improve the dataset and benchmark! Please see our [project page](https://peod-dataset.github.io/PEOD-dataset/) for contribution guidelines.
-
-## 📄 License
-
-This dataset is released under [License to be specified]. Please refer to our [project page](https://peod-dataset.github.io/PEOD-dataset/) for detailed licensing information.
-
-## 📞 Contact
-
-For questions, suggestions, or collaboration opportunities:
-
-- **Project Page**: [https://peod-dataset.github.io/PEOD-dataset/](https://peod-dataset.github.io/PEOD-dataset/)
-- **Issues**: Please use GitHub Issues for technical questions
-- **Email**: [Contact information to be provided]
+ 
 
 ---
 
