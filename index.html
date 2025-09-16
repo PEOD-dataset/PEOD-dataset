@@ -456,8 +456,7 @@
         <li><a href="#camera-system">Camera System</a></li>
         <li><a href="#visualizations">Visualizations</a></li>
         <li><a href="#benchmark">Benchmark</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="#citation">Citation</a></li>
+        <li><a href="#download">待发布</a></li>
       </ul>
     </div>
   </nav>
@@ -471,7 +470,7 @@
       <div class="cta-buttons">
         <a href="#download" class="btn btn-primary">
           <i class="fas fa-download"></i>
-          Download Dataset
+          待发布
         </a>
         <a href="#overview" class="btn btn-secondary">
           <i class="fas fa-info-circle"></i>
@@ -820,121 +819,21 @@
     </div>
   </section>
 
-  <!-- Usage Example Section -->
-  <section class="section">
-    <div class="container">
-      <div class="glass-card">
-        <h2 class="section-title">Usage Example</h2>
-        <p class="section-subtitle">
-          Simple Python code to get started with the PEOD dataset
-        </p>
-
-        <div class="code-block">
-          <pre><code>import numpy as np
-from pathlib import Path
-import cv2
-
-# Paths to frames, events and annotation file
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load one RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load bounding boxes (N × 5: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Draw first box on the first frame
-first_box = boxes[0]
-frame_idx, cls_id, x, y, w, h = first_box
-cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-
-print(f"Loaded {len(boxes)} annotations for sequence")
-cv2.imshow('PEOD Example', img)
-cv2.waitKey(0)</code></pre>
-        </div>
-
-        <p style="color: #666; margin-top: 2rem;">
-          <strong>Data Formats:</strong> Event data is provided in both RAW and DAT formats, while annotations are available in NumPy format for easy integration with existing workflows.
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Download Section -->
   <section id="download" class="section">
     <div class="container">
       <div class="glass-card">
-        <h2 class="section-title">Dataset Download</h2>
-        <p class="section-subtitle">
-          The PEOD dataset will be publicly released upon paper acceptance
-        </p>
+        <h2 class="section-title">待发布</h2>
+        <p class="section-subtitle">数据集待发布。</p>
         
-        <div style="text-align: center; padding: 2rem 0;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 16px; display: inline-block; margin-bottom: 2rem;">
-            <i class="fas fa-hourglass-half" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-            <h3>Coming Soon</h3>
-            <p>Dataset will be released publicly upon paper acceptance</p>
-          </div>
-        </div>
-
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3 class="feature-title">Multiple Formats</h3>
-            <p>Event data in RAW and DAT formats, annotations in NumPy format</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-download"></i>
-            </div>
-            <h3 class="feature-title">Easy Access</h3>
-            <p>Download links and documentation will be provided here</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3 class="feature-title">Code & Tools</h3>
-            <p>Evaluation scripts and baseline implementations included</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
 
-  <!-- Citation Section -->
-  <section id="citation" class="section">
-    <div class="container">
-      <div class="glass-card">
-        <h2 class="section-title">Citation</h2>
-        <p class="section-subtitle">
-          If you use PEOD in your research, please cite our paper (currently under review)
-        </p>
-
-        <div class="highlight-box">
-          <p><strong>Status:</strong> Paper submitted to AAAI 2026 (currently under peer review)</p>
-        </div>
-
-        <div class="code-block">
-          <pre><code>@article{PEOD2026,
-  title     = {PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author    = {[Authors to be revealed upon acceptance]},
-  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
-  year      = {2026},
-  note      = {Under review}
-}</code></pre>
-        </div>
-
-        <p style="color: #666; margin-top: 2rem; text-align: center;">
-          <em>Full citation details will be updated upon paper acceptance</em>
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Footer -->
   <footer class="footer">
@@ -951,7 +850,7 @@ cv2.waitKey(0)</code></pre>
           </a>
         </p>
         <p style="margin-top: 1rem; opacity: 0.7;">
-          © 2025 PEOD Dataset. Released under MIT License.
+          © 2025 PEOD Dataset.
         </p>
       </div>
     </div>
