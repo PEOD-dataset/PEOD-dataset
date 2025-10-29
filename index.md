@@ -8,9 +8,9 @@ description: "First large-scale pixel-aligned event-RGB dataset for challenging 
 
 # PEOD: Pixel‑aligned Event‑RGB Object Detection Dataset
 
-[![AAAI 2025](https://img.shields.io/badge/AAAI-2025-red?style=flat-square)](https://aaai.org/conference/aaai/aaai-25/)
+[![AAAI 2026](https://img.shields.io/badge/AAAI-2025-red?style=flat-square)](https://aaai.org/conference/aaai/aaai-26/)
 [![Dataset](https://img.shields.io/badge/Dataset-Coming%20Soon-green?style=flat-square)](#download)
-[![GitHub](https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=flat-square&logo=github)](https://github.com/PEOD-dataset/PEOD-dataset)
+[![GitHub](https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=flat-square&logo=github)](https://github.com/EchosLiu/PEOD-dataset)
 
 **First large-scale dataset with synchronized high-resolution event streams and RGB images**
 
@@ -79,21 +79,6 @@ Object detection for challenging scenarios increasingly relies on event cameras 
 
 </div>
 
-## 🏆 Benchmark Results
-
-We evaluated representative detectors on three modalities: event‑only, RGB‑only and Event+RGB fusion. Fusion models achieve the best accuracy while event‑only methods excel under extreme illumination.
-
-<div style="overflow-x: auto; margin: 2rem 0;">
-
-| **Modality** | **Best Model** | **mAP (COCO mAP₅₀:₉₅)** | **Key Insights** |
-|--------------|----------------|-------------------------|------------------|
-| **Event-only** | **SMamba** | **22.9%** | State‑space model; excellent under extreme conditions |
-| **RGB-only** | **YOLOv8** | **19.3%** | Strong baseline under normal lighting |
-| **Event+RGB Fusion** | **EOLO** | **24.2%** | Leverages complementary cues for robust detection |
-
-</div>
-
-> 📈 **Performance Insights**: Fusion approaches demonstrate superior performance by combining the temporal precision of event cameras with the rich semantic information of RGB imagery.
 
 ## 🎯 Object Classes
 
@@ -205,9 +190,9 @@ We welcome contributions to improve the dataset and benchmark! Please:
 
 For questions, suggestions, or collaboration opportunities:
 
-- **GitHub**: [PEOD-dataset/PEOD-dataset](https://github.com/PEOD-dataset/PEOD-dataset)
-- **Issues**: [Report technical issues](https://github.com/PEOD-dataset/PEOD-dataset/issues)
-- **Email**: Contact information will be provided upon publication
+- **GitHub**: [PEOD-dataset/PEOD-dataset](https://github.com/EchosLiu/PEOD-dataset)
+- **Issues**: [Report technical issues](https://github.com/EchosLiu/PEOD-dataset/issues)
+- **Email**: EchosLiu@outlook.com
 
 ---
 
@@ -216,10 +201,10 @@ For questions, suggestions, or collaboration opportunities:
 **🌟 Star this repository if you find PEOD useful for your research! 🌟**
 
 <p style="margin-top: 1rem;">
-<a href="https://github.com/PEOD-dataset/PEOD-dataset/stargazers">
+<a href="https://github.com/EchosLiu/PEOD-dataset/stargazers">
 <img src="https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=social" alt="GitHub stars">
 </a>
-<a href="https://github.com/PEOD-dataset/PEOD-dataset/network/members">
+<a href="https://github.com/EchosLiu/PEOD-dataset/network/members">
 <img src="https://img.shields.io/github/forks/PEOD-dataset/PEOD-dataset?style=social" alt="GitHub forks">
 </a>
 </p>
