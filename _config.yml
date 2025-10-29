@@ -4,9 +4,9 @@ theme: jekyll-theme-cayman
 
 # Site settings
 url: "https://peod-dataset.github.io"
-baseurl: "/PEOD-dataset"
-author: "PEOD Dataset Team"
-email: "contact@peod-dataset.org"
+baseurl: "/EchosLiu"
+author: "Luoping Cui, Hanqing Liu, Mingjie Liu, wangyuhao, Endian Lin, Dong Hong Jiang, Chuang Zhu"
+email: "EchosLiu@outlook.com"
 
 # SEO and social media settings
 lang: en
@@ -21,7 +21,7 @@ facebook:
 social:
   name: "PEOD Dataset"
   links:
-    - https://github.com/PEOD-dataset/PEOD-dataset
+    - https://github.com/EchosLiu/PEOD-dataset
 
 # SEO tags
 tagline: "First large-scale pixel-aligned event-RGB dataset for challenging object detection"
@@ -33,8 +33,8 @@ keywords: "event camera, object detection, computer vision, autonomous driving, 
 # GitHub settings
 github:
   repository_name: PEOD-dataset
-  repository_url: https://github.com/PEOD-dataset/PEOD-dataset
-  owner_name: PEOD-dataset
+  repository_url: https://github.com/EchosLiu/PEOD-dataset
+  owner_name: EchosLiu
 
 # Jekyll settings
 markdown: kramdown
