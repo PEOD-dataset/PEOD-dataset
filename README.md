@@ -3,10 +3,10 @@
 <div align="center">
 
 [![Project Page](https://img.shields.io/badge/🌐_Project_Page-Visit_Our_Website-blue?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
-[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2025-red?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
+[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2025-red?style=for-the-badge)](https://peod-dataset.github.io/EchosLiu/)
 [![Dataset](https://img.shields.io/badge/📊_Dataset-Coming_Soon-green?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
 
-[**🚀 View Interactive Demo**](https://peod-dataset.github.io/PEOD-dataset/) | [**📖 Documentation**](https://peod-dataset.github.io/PEOD-dataset/) | [**💾 Download**](https://peod-dataset.github.io/PEOD-dataset/)
+[**🚀 View Interactive Demo**](https://EchosLiu.github.io/PEOD-dataset/) | [**📖 Documentation**](https://EchosLiu.github.io/PEOD-dataset/) | [**💾 Download**](https://EchosLiu.github.io/PEOD-dataset/)
 
 </div>
 
@@ -163,18 +163,18 @@ If you use PEOD in your research, please cite our paper:
   title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
   author={[Authors]},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025},
+  year={2026},
   note={To appear}
 }
 ```
 
 ## 🤝 Contributing
 
-We welcome contributions to improve the dataset and benchmark! Please see our [project page](https://peod-dataset.github.io/PEOD-dataset/) for contribution guidelines.
+We welcome contributions to improve the dataset and benchmark! Please see our [project page](https://EchosLiu.github.io/PEOD-dataset/) for contribution guidelines.
 
 ## 📄 License
 
-This dataset is released under [License to be specified]. Please refer to our [project page](https://peod-dataset.github.io/PEOD-dataset/) for detailed licensing information.
+This dataset is released under [License to be specified]. Please refer to our [project page](https://EchosLiu.github.io/PEOD-dataset/) for detailed licensing information.
 
 ## 📞 Contact
 
@@ -182,7 +182,7 @@ For questions, suggestions, or collaboration opportunities:
 
 - **Project Page**: [https://peod-dataset.github.io/PEOD-dataset/](https://peod-dataset.github.io/PEOD-dataset/)
 - **Issues**: Please use GitHub Issues for technical questions
-- **Email**: [Contact information to be provided]
+- **Email**: EchosLiu@outlook.com
 
 ---
 
