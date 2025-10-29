@@ -190,7 +190,7 @@ We welcome contributions to improve the dataset and benchmark! Please:
 
 For questions, suggestions, or collaboration opportunities:
 
-- **GitHub**: [PEOD-dataset/PEOD-dataset](https://github.com/EchosLiu/PEOD-dataset)
+- **GitHub**: [PEOD-dataset](https://github.com/EchosLiu/PEOD-dataset)
 - **Issues**: [Report technical issues](https://github.com/EchosLiu/PEOD-dataset/issues)
 - **Email**: EchosLiu@outlook.com
 
