@@ -133,7 +133,7 @@ For questions, suggestions, or collaboration opportunities:
 
 - **Project Page**: [https://EchosLiu.github.io/PEOD-dataset/](https://EchosLiu.github.io/PEOD-dataset/)
 - **Issues**: Please use GitHub Issues for technical questions
-- **Email**: EchosLiu@outlook.com
+- **Email**: lpcui@bupt.edu.cn
 
 ---
 
