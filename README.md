@@ -2,9 +2,9 @@
 
 <div align="center">
 
-[![Project Page](https://img.shields.io/badge/🌐_Project_Page-Visit_Our_Website-blue?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
-[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2025-red?style=for-the-badge)](https://peod-dataset.github.io/EchosLiu/)
-[![Dataset](https://img.shields.io/badge/📊_Dataset-Coming_Soon-green?style=for-the-badge)](https://peod-dataset.github.io/PEOD-dataset/)
+[![Project Page](https://img.shields.io/badge/🌐_Project_Page-Visit_Our_Website-blue?style=for-the-badge)](https://EchosLiu.github.io/PEOD-dataset/)
+[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2026-red?style=for-the-badge)](https://EchosLiu.github.io/PEOD-dataset/)
+[![Dataset](https://img.shields.io/badge/📊_Dataset-Coming_Soon-green?style=for-the-badge)](https://EchosLiu.github.io/PEOD-dataset/)
 
 [**🚀 View Interactive Demo**](https://EchosLiu.github.io/PEOD-dataset/) | [**📖 Documentation**](https://EchosLiu.github.io/PEOD-dataset/) | [**💾 Download**](https://EchosLiu.github.io/PEOD-dataset/)
 
@@ -17,7 +17,7 @@
 **PEOD** is the first large-scale dataset providing synchronized high-resolution event streams and RGB images for object detection under challenging conditions. This groundbreaking dataset addresses the critical need for robust perception systems that can operate reliably across diverse environmental conditions, particularly in scenarios where traditional frame-based sensors struggle.
 
 <div align="center">
-<img src="datasetshow.png" alt="PEOD Dataset Overview" width="800"/>
+<img src="assets/images/datasetshow.png" alt="PEOD Dataset Overview" width="800"/>
 </div>
 
 ### 🔬 Key Contributions
@@ -47,55 +47,6 @@
 | **Training** | 270k boxes | Diverse illumination & motion conditions |
 | **Testing** | 70k boxes | Held-out sequences for benchmarking |
 
-## 🏆 Benchmark Results
-
-We evaluated state-of-the-art object detection models across three modalities:
-
-| **Modality** | **Best Model** | **mAP (COCO)** | **Key Insights** |
-|--------------|----------------|----------------|------------------|
-| **Event-only** | SMamba | **22.9%** | Excellent under extreme illumination |
-| **RGB-only** | YOLOv8 | **19.3%** | Strong baseline for normal conditions |
-| **Event+RGB Fusion** | EOLO | **24.2%** | Leverages complementary modalities |
-
-> 📝 **Note**: Results show COCO mAP₅₀:₉₅ scores. Fusion approaches demonstrate superior performance by combining the strengths of both modalities.
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install numpy opencv-python matplotlib
-```
-
-### Quick Start Example
-
-```python
-import numpy as np
-from pathlib import Path
-import cv2
-
-# Define paths to data components
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load annotations (N × 6: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Visualize first annotation
-if len(boxes) > 0:
-    frame_idx, cls_id, x, y, w, h = boxes[0]
-    cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-    cv2.putText(img, f'Class: {cls_id}', (int(x), int(y)-10), 
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-    
-    cv2.imshow('PEOD Sample', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-```
 
 ## 📁 Dataset Structure
 
@@ -147,7 +98,7 @@ Our coaxial dual-camera system ensures precise spatial correspondence between ev
 
 ## 📥 Download & Access
 
-> 🚧 **Dataset Release**: The PEOD dataset will be publicly available soon. Please check our [project page](https://peod-dataset.github.io/PEOD-dataset/) for the latest updates.
+> 🚧 **Dataset Release**: The PEOD dataset will be publicly available soon. Please check our [project page](https://EchosLiu.github.io/PEOD-dataset/) for the latest updates.
 
 **Planned Formats:**
 - **RAW format**: Unprocessed event and RGB data
@@ -180,7 +131,7 @@ This dataset is released under [License to be specified]. Please refer to our [p
 
 For questions, suggestions, or collaboration opportunities:
 
-- **Project Page**: [https://peod-dataset.github.io/PEOD-dataset/](https://peod-dataset.github.io/PEOD-dataset/)
+- **Project Page**: [https://EchosLiu.github.io/PEOD-dataset/](https://EchosLiu.github.io/PEOD-dataset/)
 - **Issues**: Please use GitHub Issues for technical questions
 - **Email**: EchosLiu@outlook.com
 

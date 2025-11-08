@@ -8,7 +8,7 @@ description: "First large-scale pixel-aligned event-RGB dataset for challenging 
 
 # PEOD: Pixel‑aligned Event‑RGB Object Detection Dataset
 
-[![AAAI 2026](https://img.shields.io/badge/AAAI-2025-red?style=flat-square)](https://aaai.org/conference/aaai/aaai-26/)
+[![AAAI 2026](https://img.shields.io/badge/AAAI-2026-red?style=flat-square)](https://aaai.org/conference/aaai/aaai-26/)
 [![Dataset](https://img.shields.io/badge/Dataset-Coming%20Soon-green?style=flat-square)](#download)
 [![GitHub](https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=flat-square&logo=github)](https://github.com/EchosLiu/PEOD-dataset)
 
@@ -23,7 +23,7 @@ description: "First large-scale pixel-aligned event-RGB dataset for challenging 
 Object detection for challenging scenarios increasingly relies on event cameras to overcome the limited dynamic range and motion blur of conventional frame‑based sensors. **PEOD** is the first large‑scale dataset providing synchronized high‑resolution event streams and RGB images for object detection under challenging conditions.
 
 <div align="center" style="margin: 2rem 0;">
-<img src="datasetshow.png" alt="PEOD Dataset Visualization" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="assets/images/datasetshow.png" alt="PEOD Dataset Visualization" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
 ## ✨ Key Features
@@ -118,37 +118,6 @@ The dataset includes six carefully selected object classes relevant to autonomou
 
 </div>
 
-## 💻 Usage Example
-
-Get started with PEOD using this simple Python example:
-
-```python
-import numpy as np
-from pathlib import Path
-import cv2
-
-# Define paths to data components
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load annotations (N × 6: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Visualize first annotation
-if len(boxes) > 0:
-    frame_idx, cls_id, x, y, w, h = boxes[0]
-    cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-    cv2.putText(img, f'Class: {cls_id}', (int(x), int(y)-10), 
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-    
-    cv2.imshow('PEOD Sample', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-```
 
 ## 📥 Download
 
@@ -173,8 +142,8 @@ If you use PEOD in your research, please cite our paper:
   title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
   author={[Authors]},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025},
-  note={To appear}
+  year={2026},
+  note={Accepted}
 }
 ```
 

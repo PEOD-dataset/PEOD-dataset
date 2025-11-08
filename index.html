@@ -17,7 +17,7 @@
       font-family: 'Inter', sans-serif;
       line-height: 1.7;
       color: #333;
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('datasetshow.png');
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('assets/images/datasetshow.png');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -455,7 +455,6 @@
         <li><a href="#overview">Overview</a></li>
         <li><a href="#camera-system">Camera System</a></li>
         <li><a href="#visualizations">Visualizations</a></li>
-        <li><a href="#benchmark">Benchmark</a></li>
         <li><a href="#download">Download</a></li>
         <li><a href="#citation">Citation</a></li>
       </ul>
@@ -594,7 +593,7 @@
         </p>
         
         <div class="image-card" style="margin-bottom: 2rem;">
-          <img src="datasetshow.png" alt="PEOD dataset challenging scenarios showcase">
+          <img src="assets/images/datasetshow.png" alt="PEOD dataset challenging scenarios showcase">
           <div class="caption">
             <strong>Challenging Scenarios from PEOD Dataset</strong>
             These examples demonstrate sensor failure scenarios where conventional frame-based cameras struggle: <em>(Top and third rows)</em> Overexposure in high dynamic range scenes leading to complete information loss; <em>(Second row)</em> Motion blur from high-speed movement; <em>(Bottom row)</em> Extreme low-light conditions with severe underexposure. In contrast to the degraded RGB images, the event-based streams (left side of each pair) consistently preserve crucial structural details and object boundaries, enabling robust detection even under these extreme conditions. This showcases the complementary nature of the two modalities and the critical importance of multimodal fusion for all-weather perception systems.
@@ -638,7 +637,7 @@
         </p>
         
         <div class="image-card">
-          <img src="camera_preview.png" alt="Coaxial dual-camera system setup">
+          <img src="assets/images/camera_preview.png" alt="Coaxial dual-camera system setup">
           <div class="caption">
             <strong>Coaxial Imaging System</strong>
             Our acquisition system utilizes a JCOPTIX OSB25R55-T5 non-polarizing plate beam splitter (50:50 split ratio) and MCC1-1S 10mm coaxial cube. The system comprises a Prophesee EVK4 HD event camera (1280×720) and Hikvision MV-CS050-10UC industrial RGB camera (2448×2048, 60fps), both equipped with identical Hikvision 25mm C-mount fixed-focal-length lenses for consistent imaging characteristics.
@@ -682,7 +681,7 @@
         </p>
         
         <div class="image-card">
-          <img src="datasta_preview.png" alt="Dataset statistics and sample visualizations">
+          <img src="assets/images/datasta_preview.png" alt="Dataset statistics and sample visualizations">
           <div class="caption">
             <strong>Dataset Statistics and Challenging Scenarios</strong>
             The figure shows the temporal distribution of our dataset with 57.1% captured under challenging illumination conditions, alongside sample aligned Event-RGB pairs from diverse driving scenarios. Our data includes urban roads, suburban areas, complex intersections, underpasses, tunnels, and highways captured continuously from 04:00 to 24:00, covering the full spectrum of lighting conditions from dawn to nighttime.
@@ -716,151 +715,6 @@
     </div>
   </section>
 
-  <!-- Benchmark Section -->
-  <section id="benchmark" class="section">
-    <div class="container">
-      <div class="glass-card">
-        <h2 class="section-title">Benchmark Results</h2>
-        <p class="section-subtitle">
-          Comprehensive evaluation of RGB-only, Event-only, and Event+RGB fusion detectors
-        </p>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Modality</th>
-              <th>Method</th>
-              <th>mAP<sub>50:95</sub></th>
-              <th>mAP<sub>50</sub></th>
-              <th>mAP<sub>75</sub></th>
-              <th>Params(M)</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Event-only</strong></td>
-              <td>SMamba</td>
-              <td><strong>22.9%</strong></td>
-              <td>43.8%</td>
-              <td>19.9%</td>
-              <td>23.7</td>
-              <td>State-space model; highest event accuracy</td>
-            </tr>
-            <tr>
-              <td><strong>Event-only</strong></td>
-              <td>RVT</td>
-              <td>17.6%</td>
-              <td>31.9%</td>
-              <td>17.0%</td>
-              <td>4.4</td>
-              <td>Transformer-based approach</td>
-            </tr>
-            <tr>
-              <td><strong>RGB-only</strong></td>
-              <td>YOLOv8</td>
-              <td><strong>19.3%</strong></td>
-              <td>31.8%</td>
-              <td>18.8%</td>
-              <td>11.1</td>
-              <td>Best performing frame-based baseline</td>
-            </tr>
-            <tr>
-              <td><strong>RGB-only</strong></td>
-              <td>YOLOX</td>
-              <td>17.4%</td>
-              <td>37.0%</td>
-              <td>14.2%</td>
-              <td>8.9</td>
-              <td>Strong single-stage detector</td>
-            </tr>
-            <tr>
-              <td><strong>Fusion</strong></td>
-              <td>EOLO</td>
-              <td><strong>24.2%</strong></td>
-              <td>40.3%</td>
-              <td>26.1%</td>
-              <td>46.2</td>
-              <td>SNN + CSPDN fusion; top performer</td>
-            </tr>
-            <tr>
-              <td><strong>Fusion</strong></td>
-              <td>RENet</td>
-              <td>22.5%</td>
-              <td>39.6%</td>
-              <td>21.3%</td>
-              <td>37.7</td>
-              <td>ResNet-101 based fusion</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="highlight-box">
-          <p><strong>Key Finding:</strong> Fusion models consistently outperform single-modality baselines, with EOLO achieving 24.2% mAP<sub>50:95</sub>, surpassing the best Event-only model by +1.3pp and the best RGB baseline by +4.9pp.</p>
-        </div>
-
-        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: #2c3e50;">Condition-Specific Performance</h3>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h3 class="feature-title">Extreme Illumination</h3>
-            <p>Event-only methods excel with SMamba achieving 19.8% mAP, significantly outperforming RGB-only (13.0%) and fusion methods</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-sun"></i>
-            </div>
-            <h3 class="feature-title">Normal Conditions</h3>
-            <p>Fusion methods dominate with EOLO reaching 43.2% mAP, exceeding RGB-only by +8.5pp and Event-only by +22.5pp</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Usage Example Section -->
-  <section class="section">
-    <div class="container">
-      <div class="glass-card">
-        <h2 class="section-title">Usage Example</h2>
-        <p class="section-subtitle">
-          Simple Python code to get started with the PEOD dataset
-        </p>
-
-        <div class="code-block">
-          <pre><code>import numpy as np
-from pathlib import Path
-import cv2
-
-# Paths to frames, events and annotation file
-frame_dir = Path('PEOD/train/sequence_001/rgb')
-event_file = Path('PEOD/train/sequence_001/events.dat')
-anno_file = Path('PEOD/train/sequence_001/boxes.npy')
-
-# Load one RGB frame
-img = cv2.imread(str(frame_dir / '000000.png'))
-
-# Load bounding boxes (N × 5: frame_idx, class_id, x, y, w, h)
-boxes = np.load(anno_file, allow_pickle=True)
-
-# Draw first box on the first frame
-first_box = boxes[0]
-frame_idx, cls_id, x, y, w, h = first_box
-cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 2)
-
-print(f"Loaded {len(boxes)} annotations for sequence")
-cv2.imshow('PEOD Example', img)
-cv2.waitKey(0)</code></pre>
-        </div>
-
-        <p style="color: #666; margin-top: 2rem;">
-          <strong>Data Formats:</strong> Event data is provided in both RAW and DAT formats, while annotations are available in NumPy format for easy integration with existing workflows.
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- Download Section -->
   <section id="download" class="section">
@@ -916,22 +770,18 @@ cv2.waitKey(0)</code></pre>
         </p>
 
         <div class="highlight-box">
-          <p><strong>Status:</strong> Paper submitted to AAAI 2026 (currently under peer review)</p>
+          <p><strong>Status:</strong> Accepted at AAAI 2026</p>
         </div>
 
         <div class="code-block">
-          <pre><code>@article{PEOD2026,
+          <pre><code>@inproceedings{PEOD2026,
   title     = {PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author    = {[Authors to be revealed upon acceptance]},
-  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author    = {[Authors]},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
   year      = {2026},
-  note      = {Under review}
+  note      = {Accepted}
 }</code></pre>
         </div>
-
-        <p style="color: #666; margin-top: 2rem; text-align: center;">
-          <em>Full citation details will be updated upon paper acceptance</em>
-        </p>
       </div>
     </div>
   </section>
@@ -943,10 +793,10 @@ cv2.waitKey(0)</code></pre>
         <h3>PEOD Dataset</h3>
         <p>Advancing object detection research through multimodal event-RGB data</p>
         <p style="margin-top: 2rem;">
-          <a href="camera.pdf" style="color: #667eea; text-decoration: none; margin-right: 2rem;">
+          <a href="assets/pdfs/camera.pdf" style="color: #667eea; text-decoration: none; margin-right: 2rem;">
             <i class="fas fa-file-pdf"></i> Camera System Details
           </a>
-          <a href="datasta.pdf" style="color: #667eea; text-decoration: none;">
+          <a href="assets/pdfs/datasta.pdf" style="color: #667eea; text-decoration: none;">
             <i class="fas fa-chart-bar"></i> Dataset Statistics
           </a>
         </p>

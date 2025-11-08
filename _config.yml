@@ -3,15 +3,15 @@ description: "First large-scale dataset providing synchronized high-resolution e
 theme: jekyll-theme-cayman
 
 # Site settings
-url: "https://peod-dataset.github.io"
-baseurl: "/EchosLiu"
+url: "https://EchosLiu.github.io"
+baseurl: "/PEOD-dataset"
 author: "Luoping Cui, Hanqing Liu, Mingjie Liu, wangyuhao, Endian Lin, Dong Hong Jiang, Chuang Zhu"
 email: "EchosLiu@outlook.com"
 
 # SEO and social media settings
 lang: en
 locale: en_US
-image: /datasetshow.png
+image: /assets/images/datasetshow.png
 twitter:
   username: peod_dataset
   card: summary_large_image
@@ -79,14 +79,14 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /datasetshow.png
+      image: /assets/images/datasetshow.png
 
 # Custom variables
 dataset:
   name: "PEOD"
   full_name: "Pixel-aligned Event-RGB Object Detection Dataset"
   version: "1.0"
-  release_year: 2025
+  release_year: 2026
   sequences: "120+"
   frames: "72k"
   annotations: "340k"
