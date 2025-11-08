@@ -1,4 +1,4 @@
-# PEOD: Pixel-aligned Event-RGB Object Detection Dataset
+# PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions
 
 <div align="center">
 
@@ -107,16 +107,10 @@ Our coaxial dual-camera system ensures precise spatial correspondence between ev
 
 ## 📚 Citation
 
-If you use PEOD in your research, please cite our paper:
+If you use PEOD in your research, please cite our paper(forthcoming):
 
 ```bibtex
-@inproceedings{peod2025,
-  title={PEOD: Pixel-aligned High-Resolution Event-RGB Dataset for Challenging Object Detection},
-  author={[Authors]},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2026},
-  note={To appear}
-}
+Forthcoming
 ```
 
 ## 🤝 Contributing
@@ -125,7 +119,7 @@ We welcome contributions to improve the dataset and benchmark! Please see our [p
 
 ## 📄 License
 
-This dataset is released under [License to be specified]. Please refer to our [project page](https://EchosLiu.github.io/PEOD-dataset/) for detailed licensing information.
+This dataset is released under MIT License. Please refer to our [project page](https://EchosLiu.github.io/PEOD-dataset/) for detailed licensing information.
 
 ## 📞 Contact
 
