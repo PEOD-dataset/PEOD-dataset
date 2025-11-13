@@ -5,7 +5,7 @@ theme: jekyll-theme-cayman
 # Site settings
 url: "https://EchosLiu.github.io"
 baseurl: "/PEOD-dataset"
-author: "Luoping Cui, Hanqing Liu, Mingjie Liu, wangyuhao, Endian Lin, Dong Hong Jiang, Chuang Zhu"
+author: "Luoping Cui, Hanqing Liu, Mingjie Liu, Endian Lin, Dong Hong Jiang, wangyuhao, Chuang Zhu"
 email: "EchosLiu@outlook.com"
 
 # SEO and social media settings
@@ -25,7 +25,7 @@ social:
 
 # SEO tags
 tagline: "First large-scale pixel-aligned event-RGB dataset for challenging object detection"
-keywords: "event camera, object detection, computer vision, autonomous driving, dataset, RGB, multimodal, AAAI"
+keywords: "event camera, challenge conditions, object detection, computer vision, autonomous driving, dataset, RGB, multimodal, AAAI"
 
 # Google Analytics (when available)
 # google_analytics: UA-XXXXXXXX-X
