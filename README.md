@@ -107,10 +107,18 @@ Our coaxial dual-camera system ensures precise spatial correspondence between ev
 
 ## 📚 Citation
 
-If you use PEOD in your research, please cite our paper(forthcoming):
+If you use PEOD in your research, please cite our paper (now accepted at AAAI 2026):
 
 ```bibtex
-Forthcoming
+@misc{cui2025peodpixelalignedeventrgbbenchmark,
+  title         = {PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions},
+  author        = {Luoping Cui and Hanqing Liu and Mingjie Liu and Endian Lin and Donghong Jiang and Yuhao Wang and Chuang Zhu},
+  year          = {2025},
+  eprint        = {2511.08140},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2511.08140},
+}
 ```
 
 ## 🤝 Contributing
