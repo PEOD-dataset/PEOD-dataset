@@ -40,31 +40,42 @@
 | **Classes** | 6 | car, bus, truck, two-wheeler, three-wheeler, person |
 | **Dynamic Range** | >87 dB | Event camera HDR capability |
 
-### 📈 Data Distribution
-
-| **Split** | **Annotations** | **Characteristics** |
-|-----------|-----------------|-------------------|
-| **Training** | 270k boxes | Diverse illumination & motion conditions |
-| **Testing** | 70k boxes | Held-out sequences for benchmarking |
-
 
 ## 📁 Dataset Structure
 
 ```
 PEOD/
-├── train/
-│   ├── sequence_001/
-│   │   ├── rgb/              # RGB frames (PNG format)
-│   │   ├── events.dat        # Event stream data
-│   │   └── boxes.npy         # Bounding box annotations
-│   ├── sequence_002/
-│   └── ...
-├── test/
+├── rgb/
+│   ├── train/
+│   │   ├── sequence_001                       # the first RGB sequence
+│   │   │   ├── sequence_001_0001.png          # the first RGB frame
+│   │   │   ├── sequence_001_0001.png          # the second RGB frame
+│   │   │   └── ...
+│   │   ├── sequence_002                       # the second RGB sequence
+│   │   └── ...                                
+│   └── test/
+│   │   ├── challenge/                         # the Illumination Challenge Subset
+│   │   │   ├── sequence_001_test              # the first illumination challenge sequence
+│   │   │   └── ...
+│   │   └── nromal/                            # the Normal Subset
+│   │   │   ├── sequence_013_test              # the first normal sequence
+│   │   │   └── ...
+├── event/
+│   ├── train/
+│   │   ├── sequence_001.dat              
+│   │   ├── sequence_002.dat
+│   │   └── ...              
+│   └── test/
+│   │   ├── challenge/                         
+│   │   │   ├── sequence_001_test.dat          
+│   │   │   └── ...
+│   │   └── nromal/                            
+│   │   │   ├── sequence_013_test.dat            
+│   │   │   └── ...
+├── timestamp/
 │   └── [similar structure]
-└── metadata/
-    ├── class_names.txt       # Object class definitions
-    ├── statistics.json       # Dataset statistics
-    └── splits.json          # Train/test split information
+└── annotations/
+    └── [similar structure]
 ```
 
 ## 🎯 Object Classes
@@ -74,11 +85,11 @@ The dataset includes six carefully selected object classes relevant to autonomou
 | **Class** | **Description** | **Typical Scenarios** |
 |-----------|-----------------|----------------------|
 | **Car** | Standard passenger vehicles | Urban/suburban driving |
+| **Person** | Pedestrians | Crosswalks, sidewalks |
 | **Bus** | Public transportation vehicles | City centers, bus routes |
 | **Truck** | Commercial vehicles | Highways, industrial areas |
 | **Two-wheeler** | Motorcycles, bicycles | Urban intersections |
 | **Three-wheeler** | Auto-rickshaws, tricycles | Developing urban areas |
-| **Person** | Pedestrians | Crosswalks, sidewalks |
 
 ## 🌟 Unique Features
 
@@ -98,26 +109,18 @@ Our coaxial dual-camera system ensures precise spatial correspondence between ev
 
 ## 📥 Download & Access
 
-> 🚧 **Dataset Release**: The PEOD dataset will be publicly available soon. Please check our [project page](https://EchosLiu.github.io/PEOD-dataset/) for the latest updates.
-
-**Planned Formats:**
-- **RAW format**: Unprocessed event and RGB data
-- **DAT format**: Preprocessed event representations
-- **Annotations**: NumPy arrays with bounding box coordinates
+> 🚧 **Dataset Download**: The PEOD dataset can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1Mj4tpGBFzSyhz6dZX0dDrw?pwd=g97d).
 
 ## 📚 Citation
 
 If you use PEOD in your research, please cite our paper (now accepted at AAAI 2026):
 
 ```bibtex
-@misc{cui2025peodpixelalignedeventrgbbenchmark,
-  title         = {PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions},
-  author        = {Luoping Cui and Hanqing Liu and Mingjie Liu and Endian Lin and Donghong Jiang and Yuhao Wang and Chuang Zhu},
-  year          = {2025},
-  eprint        = {2511.08140},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV},
-  url           = {https://arxiv.org/abs/2511.08140},
+@article{cui2025peod,
+  title={PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions},
+  author={Cui, Luoping and Liu, Hanqing and Liu, Mingjie and Lin, Endian and Jiang, Donghong and Wang, Yuhao and Zhu, Chuang},
+  journal={arXiv preprint arXiv:2511.08140},
+  year={2025}
 }
 ```
 
@@ -135,7 +138,7 @@ For questions, suggestions, or collaboration opportunities:
 
 - **Project Page**: [https://EchosLiu.github.io/PEOD-dataset/](https://EchosLiu.github.io/PEOD-dataset/)
 - **Issues**: Please use GitHub Issues for technical questions
-- **Email**: lpcui@bupt.edu.cn
+- **Email**: 3254827845@qq.com；3371665749@qq.com；echosliu@outlook.com；czhu@bupt.edu.cn
 
 ---
 
@@ -143,7 +146,7 @@ For questions, suggestions, or collaboration opportunities:
 
 **🌟 Star this repository if you find PEOD useful for your research! 🌟**
 
-[![GitHub stars](https://img.shields.io/github/stars/PEOD-dataset/PEOD-dataset?style=social)](https://github.com/PEOD-dataset/PEOD-dataset/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/PEOD-dataset/PEOD-dataset?style=social)](https://github.com/PEOD-dataset/PEOD-dataset/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/bupt-ai-cz/PEOD?style=social)](https://github.com/bupt-ai-cz/PEOD/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/bupt-ai-cz/PEOD?style=social)](https://github.com/bupt-ai-cz/PEOD/network/members)
 
 </div>
