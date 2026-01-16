@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Project Page](https://img.shields.io/badge/🌐_Project_Page-Visit_Our_Website-blue?style=for-the-badge)](https://EchosLiu.github.io/PEOD-dataset/)
-[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2026-red?style=for-the-badge)](https://arxiv.org/pdf/2511.08140)
+[![Paper](https://img.shields.io/badge/📄_Paper-AAAI_2026-red?style=for-the-badge)](https://arxiv.org/pdf/2511.08140v1)
 [![Dataset](https://img.shields.io/badge/📊_Dataset-Download-green?style=for-the-badge)](https://EchosLiu.github.io/PEOD-dataset/)
 
 [**📖 Documentation**](https://EchosLiu.github.io/PEOD-dataset/) | [**💾 Download**](https://EchosLiu.github.io/PEOD-dataset/)
