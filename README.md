@@ -1,4 +1,4 @@
-# PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions
+# PEOD: A Pixel-Aligned Event-RGB Benchmark for Object Detection under Challenging Conditions [Project Page]
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 ## 🎯 Overview
 
-**PEOD** is the first large-scale dataset providing synchronized high-resolution event streams and RGB images for object detection under challenging conditions. This groundbreaking dataset addresses the critical need for robust perception systems that can operate reliably across diverse environmental conditions, particularly in scenarios where traditional frame-based sensors struggle.
+**PEOD** is the first large-scale dataset providing synchronized high-resolution event streams and RGB images for object detection under challenging conditions. This groundbreaking dataset addresses the critical need for robust perception systems that can operate reliably across diverse environmental conditions, particularly in scenarios where traditional frame-based sensors struggle.code:[https://github.com/bupt-ai-cz/PEOD]
 
 <div align="center">
 <img src="assets/images/datasetshow.png" alt="PEOD Dataset Overview" width="800"/>
